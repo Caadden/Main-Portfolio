@@ -122,7 +122,24 @@ body, html {
   pointer-events: none;
 }
 
-/* Profile image gradient background and positioning */
+.projectcard.sudoku-card {
+  cursor: pointer;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+}
+
+.projectcard.sudoku-card:hover,
+.projectcard.sudoku-card:focus-visible {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.10), 0 4px 16px rgba(0,0,0,0.10);
+  outline: none;
+  background: rgba(128, 128, 128, 0.3);
+}
+
+.projectcard.sudoku-card:focus-visible {
+  outline: 2px solid var(--main-accent);
+  outline-offset: 4px;
+}
+
 .profile-img-gradient {
   position: relative;
   width: 100%;
@@ -237,11 +254,34 @@ h1, h2 {
   align-items: center;
 }
 
+.projectcard.sudoku-card {
+  background: rgba(255, 255, 255, 0.14);
+  color: var(--main-accent);
+}
+
+.projectcard.sudoku-card h3,
+.projectcard.sudoku-card p {
+  color: inherit;
+}
+
+.projectcard.sudoku-card:hover,
+.projectcard.sudoku-card:focus-visible {
+  background: rgba(200, 200, 200, 0.5);
+  color: #2c2c2c;
+  border-color: rgba(220, 220, 220, 0.7);
+}
+
+.projectcard.sudoku-card:hover h3,
+.projectcard.sudoku-card:hover p,
+.projectcard.sudoku-card:focus-visible h3,
+.projectcard.sudoku-card:focus-visible p {
+  color: #2c2c2c;
+}
+
 .projectcard:hover {
   transform: translateY(-8px) scale(1.03);
   /* fallback subtle shadow for older browsers */
   box-shadow: 0 8px 24px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.10);
-  /* modern browsers: use a softened tint of the page background for the glow */
   box-shadow: 0 8px 24px color-mix(in srgb, var(--main-bg) 18%, black 82%), 0 2px 8px rgba(0,0,0,0.10);
   background: rgba(128, 128, 128, 0.28);
 }
@@ -295,7 +335,6 @@ body.theme-afternoon.bg-afternoon1 {
   --main-accent: #F5F7FA;
   --main-text: #00B3C6;
   background-color: var(--main-bg);
-  /* Menu defaults for afternoon */
   --menu-bg: rgba(34,34,34,0.97);
   --menu-text: var(--main-text);
   --menu-pill: var(--main-accent);
@@ -313,8 +352,8 @@ body.theme-afternoon.bg-afternoon2 {
 
 .theme-evening {
   --main-bg: #BFB9B0;
-  --main-accent: #BFB9B0;
-  --main-text: #475C6E;
+  --main-accent: #b89085;
+  --main-text: #365760;
   background-color: var(--main-bg);
   --menu-bg: rgba(34,34,34,0.97);
   --menu-text: var(--main-text);
@@ -322,7 +361,7 @@ body.theme-afternoon.bg-afternoon2 {
 }
 .theme-night {
   --main-bg: #232946;
-  --main-accent: #A6A6A6;
+  --main-accent: #ffffff;
   --main-text: #2E2E2E;
   background-color: var(--main-bg);
   /* Night menu: overlay uses accent, pills/text swap */

@@ -4,8 +4,8 @@
   background: var(--menu-pill);
   color: var(--menu-bg);
 }
-/* Hamburger menu button */
-#hamburger-menu {
+/* Menu button */
+#menu-button {
   position: fixed;
   top: 1.2rem;
   right: 1.5rem;
@@ -24,18 +24,18 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.12);
   transition: background 0.18s, opacity 0.22s, transform 0.22s;
 }
-#hamburger-menu.hide-on-scroll {
+#menu-button.hide-on-scroll {
   opacity: 0;
   pointer-events: none;
   transform: translateY(-32px) scale(0.96);
 }
-#hamburger-menu:hover {
+#menu-button:hover {
   background: var(--menu-pill);
 }
-#hamburger-menu:hover span {
+#menu-button:hover span {
   background: var(--menu-bg);
 }
-#hamburger-menu span {
+#menu-button span {
   display: block;
   width: 22px;
   height: 2.5px;
@@ -46,10 +46,10 @@
   margin: 0;
   padding: 0;
 }
-#hamburger-menu span:not(:first-child) {
+#menu-button span:not(:first-child) {
   display: none;
 }
-#hamburger-menu:active span {
+#menu-button:active span {
   background: var(--main-text);
 }
 

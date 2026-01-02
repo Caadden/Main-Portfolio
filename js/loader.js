@@ -8,7 +8,7 @@ export function hideLoading() {
   }, 350); // match CSS fade duration
   // clear inline lock
   document.body.style.overflow = '';
-  const hb = document.getElementById('hamburger-menu');
+  const hb = document.getElementById('menu-button');
   if (hb) hb.style.display = '';
 }
 

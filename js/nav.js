@@ -1,9 +1,9 @@
-// nav.js — hamburger menu and nav helpers
-export function setupHamburgerMenu() {
-  const menuBtn = document.getElementById('hamburger-menu');
+// nav.js — menu and nav helpers
+export function setupMenuButton() {
+  const menuBtn = document.getElementById('menu-button');
   const overlay = document.getElementById('menu-overlay');
   if (!menuBtn || !overlay) {
-    console.warn('setupHamburgerMenu: missing #hamburger-menu or #menu-overlay — skipping menu wiring');
+    console.warn('setupMenuButton: missing #menu-button or #menu-overlay — skipping menu wiring');
     return; // avoid throwing if DOM structure changed
   }
   const navLinks = overlay.querySelectorAll('a[data-page]');

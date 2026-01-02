@@ -1,9 +1,10 @@
 // main.js — application bootstrap (ES module)
-import { setupHamburgerMenu, handleNav } from './nav.js';
+import { setupMenuButton, handleNav } from './nav.js';
 import { animateLoaderPercent, hideLoading } from './loader.js';
 import { initTheme } from './theme.js';
 import { pages, loadPage, updateSwipeArrowVisibility, prefetchPagesIdle } from './spa.js';
 import { initScrollHandlers, lastScrollDirection } from './scroll.js';
+import { initSudokuWindow } from './sudoku.js';
 
 function initApp() {
   try {
@@ -16,7 +17,7 @@ function initApp() {
 
     // Lock scroll during load (base.css already hides scrolling)
     document.body.style.overflow = 'hidden';
-    const hb = document.getElementById('hamburger-menu');
+    const hb = document.getElementById('menu-button');
     if (hb) hb.style.display = 'none';
 
     // Run loader then inject initial page
@@ -33,8 +34,11 @@ function initApp() {
     });
 
     // Setup menu logic and global click nav handler
-    setupHamburgerMenu();
+    setupMenuButton();
     document.addEventListener('click', handleNav);
+    
+    // Initialize Sudoku window
+    initSudokuWindow();
 
     // Update swipe arrow visibility when route/hash changes
     window.addEventListener('hashchange', () => {

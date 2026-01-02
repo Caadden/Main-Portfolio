@@ -1,42 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Caden Castleberry | Portfolio</title>
 
     <link rel="stylesheet" href="fonts.css" />
     <link rel="stylesheet" href="animations.css" />
     <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href="sudoku.css" />
     <link rel="stylesheet" href="nav.css" />
-</head>
-<body>
-    <video autoplay loop muted playsinline class="bg-video" preload="metadata" poster="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9' preserveAspectRatio='none'><rect width='100%25' height='100%25' fill='%23232'/></svg>">
-        <source src="assets/backgrounds/bg-afternoon1.mp4" type="video/mp4">
-        Your browser does not support the video tag.
+  </head>
+  <body>
+    <video
+      autoplay
+      loop
+      muted
+      playsinline
+      class="bg-video"
+      preload="metadata"
+      poster="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9' preserveAspectRatio='none'><rect width='100%25' height='100%25' fill='%23232'/></svg>"
+    >
+      <source src="assets/backgrounds/bg-afternoon1.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
     </video>
-        <img src="assets/swipe_arrow.png" alt="Swipe down arrow" class="swipe-arrow" />
+    <img
+      src="assets/swipe_arrow.png"
+      alt="Swipe down arrow"
+      class="swipe-arrow"
+    />
     <header>
-        <button id="hamburger-menu" aria-label="Open menu" aria-expanded="false">
-            <span></span><span></span><span></span>
-        </button>
-        <div id="menu-overlay" class="menu-overlay hidden" tabindex="-1" aria-hidden="true">
-            <nav class="menu-nav" aria-label="Main menu">
-                <a href="#home" data-page="home">home</a>
-                <a href="#about" data-page="about">about me</a>
-                <a href="#projects" data-page="projects">projects</a>
-                <a href="#experiences" data-page="experiences">experiences</a>
-                <a href="#contact" data-page="contact">contact</a>
-            </nav>
-        </div>
+      <button id="menu-button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div
+        id="menu-overlay"
+        class="menu-overlay hidden"
+        tabindex="-1"
+        aria-hidden="true"
+      >
+        <nav class="menu-nav" aria-label="Main menu">
+          <a href="#home" data-page="home">home</a>
+          <a href="#about" data-page="about">about me</a>
+          <a href="#projects" data-page="projects">projects</a>
+          <a href="#experiences" data-page="experiences">experiences</a>
+          <a href="#contact" data-page="contact">contact</a>
+        </nav>
+      </div>
     </header>
     <div id="spa-loading-overlay">
-        <div class="spa-loader-container">
-            <div class="loader"></div>
-            <div class="loader-percent" id="loader-percent">0%</div>
-        </div>
+      <div class="spa-loader-container">
+        <div class="loader"></div>
+        <div class="loader-percent" id="loader-percent">0%</div>
+      </div>
     </div>
     <main id="spa-content"></main>
     <script type="module" src="js/main.js"></script>
-</body>
+  </body>
 </html>

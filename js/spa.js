@@ -12,14 +12,14 @@ export const pages = {
         <h1>Projects</h1>
         <section>
             <div class="project-cards">
-                <div class="projectcard">
-                    <h3>LyricAI Analyzer</h3>
-                    <p>Work in Progress!</p>
-                </div>
-                <div class="projectcard">
-                    <h3>Sudoku</h3>
-                    <p>Work in Progress!</p>
-                </div>
+          <div class="projectcard sudoku-card" data-sudoku-open tabindex="0" role="button" aria-label="Open the Sudoku project window">
+            <h3>Sudoku</h3>
+                    <p>A calm, first-project take on classic Sudoku.</p>
+          </div>
+          <div class="projectcard">
+            <h3>LyricAI Analyzer</h3>
+            <p>Work in Progress!</p>
+          </div>
             </div>
         </section>
     `,
