@@ -15,8 +15,7 @@ A GUI-based Sudoku game developed as part of a team project for a university cou
 
 > *Source code is private due to repository restrictions.*
 
-### LyricAI Analyzer (React-based)
-
+### Lyra (React-based)
 **WIP**
 
 ## Skills
