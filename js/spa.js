@@ -16,9 +16,9 @@ export const pages = {
             <h3>Sudoku</h3>
                     <p>A calm, first-project take on classic Sudoku.</p>
           </div>
-          <div class="projectcard">
-            <h3>LyricAI Analyzer</h3>
-            <p>Work in Progress!</p>
+          <div class="projectcard lyra-card" data-lyra-open tabindex="0" role="button" aria-label="Open the Lyra project window">
+            <h3>Lyra</h3>
+            <p>AI-driven close reading for mood, themes, and meaning.</p>
           </div>
             </div>
         </section>
@@ -39,7 +39,7 @@ export const pages = {
                 <a href="https://www.github.com/Caadden" target="_blank">GitHub</a>
             </div>
             <div style="display: flex; justify-content: center; margin-top: 1.2rem;">
-                <a href="mailto:cadencastleberry1@gmail.com" class="email-btn">Email</a>
+                <a href="mailto:cadencastleberry1114@gmail.com" class="email-btn">Email</a>
             </div>
         </footer>
     `

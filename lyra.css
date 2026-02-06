@@ -1,9 +1,9 @@
-/* Sudoku app-style window overlay */
+/* Lyra app-style window overlay */
 body.modal-open {
   overflow: hidden;
 }
 
-.sudoku-overlay {
+.lyra-overlay {
   position: fixed;
   inset: 0;
   background: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.06), transparent 35%),
@@ -17,12 +17,12 @@ body.modal-open {
   z-index: 2200;
 }
 
-.sudoku-overlay.visible {
+.lyra-overlay.visible {
   opacity: 1;
   pointer-events: auto;
 }
 
-.sudoku-window {
+.lyra-window {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -37,7 +37,7 @@ body.modal-open {
     inset 0 1px 0 rgba(255,255,255,0.9);
   color: #0f172a;
   overflow: hidden;
-  transform-origin: var(--sudoku-origin-x, 50vw) var(--sudoku-origin-y, 50vh);
+  transform-origin: var(--lyra-origin-x, 50vw) var(--lyra-origin-y, 50vh);
   transform: translate(-50%, -50%) scale(0.86) translateY(28px) rotateX(-8deg);
   opacity: 0;
   transition:
@@ -45,22 +45,22 @@ body.modal-open {
     opacity 0.26s ease;
 }
 
-.sudoku-overlay.visible .sudoku-window.pop {
+.lyra-overlay.visible .lyra-window.pop {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1) translateY(0) rotateX(0deg);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .sudoku-window {
+  .lyra-window {
     transform: translate(-50%, -50%) scale(1);
     transition: opacity 0.18s ease;
   }
-  .sudoku-overlay.visible .sudoku-window.pop {
+  .lyra-overlay.visible .lyra-window.pop {
     transform: translate(-50%, -50%) scale(1);
   }
 }
 
-.sudoku-window-bar {
+.lyra-window-bar {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -73,50 +73,50 @@ body.modal-open {
   user-select: none;
 }
 
-.sudoku-window-bar:active {
+.lyra-window-bar:active {
   cursor: grabbing;
 }
 
-.sudoku-window-bar .dot {
+.lyra-window-bar .dot {
   width: 12px;
   height: 12px;
   border-radius: 50%;
   box-shadow: 0 1px 0 rgba(255,255,255,0.6), inset 0 1px 2px rgba(0,0,0,0.28);
 }
-.sudoku-window-bar .dot.red { background: #ff5f56; }
-.sudoku-window-bar .dot.yellow { background: #ffbd2e; }
-.sudoku-window-bar .dot.green { background: #27c93f; }
+.lyra-window-bar .dot.red { background: #ff5f56; }
+.lyra-window-bar .dot.yellow { background: #ffbd2e; }
+.lyra-window-bar .dot.green { background: #27c93f; }
 
-.sudoku-close {
+.lyra-close {
   display: none;
 }
 
-.sudoku-window-bar .dot {
+.lyra-window-bar .dot {
   cursor: pointer;
   transition: transform 0.15s ease, filter 0.15s ease;
 }
 
-.sudoku-window-bar .dot.red:hover,
-.sudoku-window-bar .dot.yellow:hover {
+.lyra-window-bar .dot.red:hover,
+.lyra-window-bar .dot.yellow:hover {
   transform: scale(1.15);
   filter: brightness(1.1);
 }
 
-.sudoku-window-body {
+.lyra-window-body {
   padding: 22px 24px 28px;
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
 
-.sudoku-header {
+.lyra-header {
   display: flex;
   align-items: flex-start;
   gap: 16px;
   justify-content: space-between;
 }
 
-.sudoku-kicker {
+.lyra-kicker {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-size: 0.8rem;
@@ -124,12 +124,12 @@ body.modal-open {
   color: #475569;
 }
 
-.sudoku-sub {
+.lyra-sub {
   margin: 6px 0 0;
   color: #334155;
 }
 
-.sudoku-pill {
+.lyra-pill {
   background: #0f172a;
   color: #f8fafc;
   padding: 0.4rem 0.85rem;
@@ -139,13 +139,13 @@ body.modal-open {
   box-shadow: 0 4px 12px rgba(0,0,0,0.16);
 }
 
-.sudoku-grid {
+.lyra-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 14px;
 }
 
-.sudoku-window .sudoku-card {
+.lyra-window .lyra-card {
   background: rgba(255, 255, 255, 0.14);
   border: 1px solid rgba(0,0,0,0.04);
   border-radius: 14px;
@@ -153,23 +153,24 @@ body.modal-open {
   box-shadow: 0 10px 24px rgba(0,0,0,0.08);
 }
 
-.sudoku-window .sudoku-label {
+.lyra-window .lyra-label {
   margin: 0 0 4px;
   color: #475569;
   font-size: 0.9rem;
 }
 
-.sudoku-window .sudoku-card h3 {
+.lyra-window .lyra-card h3 {
   margin: 0 0 4px;
   color: #0f172a;
+  font-size: 0.95rem;
 }
 
-.sudoku-window .sudoku-note {
+.lyra-window .lyra-note {
   margin: 0;
   color: #334155;
 }
 
-.sudoku-actions {
+.lyra-actions {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -178,7 +179,7 @@ body.modal-open {
   margin-right: auto;
 }
 
-.sudoku-actions .pill.ghost {
+.lyra-actions .pill.ghost {
   background: transparent;
   color: #0f172a;
   border: none;
@@ -192,7 +193,7 @@ body.modal-open {
   white-space: nowrap;
   position: relative;
 }
-.sudoku-actions .pill.ghost::after {
+.lyra-actions .pill.ghost::after {
   content: "";
   position: absolute;
   left: 0;
@@ -204,39 +205,39 @@ body.modal-open {
   transform-origin: left;
   transition: transform 0.18s ease;
 }
-.sudoku-actions .pill.ghost:hover,
-.sudoku-actions .pill.ghost:focus-visible {
+.lyra-actions .pill.ghost:hover,
+.lyra-actions .pill.ghost:focus-visible {
   text-decoration: none;
 }
-.sudoku-actions .pill.ghost:hover::after,
-.sudoku-actions .pill.ghost:focus-visible::after {
+.lyra-actions .pill.ghost:hover::after,
+.lyra-actions .pill.ghost:focus-visible::after {
   transform: scaleX(1);
 }
-.sudoku-actions .pill.ghost:disabled {
+.lyra-actions .pill.ghost:disabled {
   opacity: 0.6;
   cursor: not-allowed;
   text-decoration: none;
 }
 
-/* Sudoku project card button styling */
-.sudoku-window .sudoku-card .pill {
+/* Lyra project card button styling */
+.lyra-card .pill {
   background: var(--main-accent);
   color: var(--main-text);
   border: transparent;
 }
 
-.sudoku-window .sudoku-card .pill:hover,
-.sudoku-window .sudoku-card .pill:focus-visible {
+.lyra-card .pill:hover,
+.lyra-card .pill:focus-visible {
   background: transparent;
   color: var(--main-accent);
   border-color: var(--main-accent);
 }
 
 @media (max-width: 640px) {
-  .sudoku-window {
+  .lyra-window {
     max-height: none;
   }
-  .sudoku-header {
+  .lyra-header {
     flex-direction: column;
     align-items: flex-start;
   }

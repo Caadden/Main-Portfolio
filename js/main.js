@@ -5,6 +5,7 @@ import { initTheme } from './theme.js';
 import { pages, loadPage, updateSwipeArrowVisibility, prefetchPagesIdle } from './spa.js';
 import { initScrollHandlers, lastScrollDirection } from './scroll.js';
 import { initSudokuWindow } from './sudoku.js';
+import { initLyraWindow } from './lyra.js';
 
 function initApp() {
   try {
@@ -37,8 +38,9 @@ function initApp() {
     setupMenuButton();
     document.addEventListener('click', handleNav);
     
-    // Initialize Sudoku window
+    // Initialize project windows
     initSudokuWindow();
+    initLyraWindow();
 
     // Update swipe arrow visibility when route/hash changes
     window.addEventListener('hashchange', () => {

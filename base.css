@@ -122,20 +122,24 @@ body, html {
   pointer-events: none;
 }
 
-.projectcard.sudoku-card {
+.projectcard.sudoku-card,
+.projectcard.lyra-card {
   cursor: pointer;
   transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
 }
 
 .projectcard.sudoku-card:hover,
-.projectcard.sudoku-card:focus-visible {
+.projectcard.sudoku-card:focus-visible,
+.projectcard.lyra-card:hover,
+.projectcard.lyra-card:focus-visible {
   transform: translateY(-10px) scale(1.05);
   box-shadow: 0 12px 32px rgba(0,0,0,0.10), 0 4px 16px rgba(0,0,0,0.10);
   outline: none;
   background: rgba(128, 128, 128, 0.3);
 }
 
-.projectcard.sudoku-card:focus-visible {
+.projectcard.sudoku-card:focus-visible,
+.projectcard.lyra-card:focus-visible {
   outline: 2px solid var(--main-accent);
   outline-offset: 4px;
 }
@@ -254,18 +258,23 @@ h1, h2 {
   align-items: center;
 }
 
-.projectcard.sudoku-card {
+.projectcard.sudoku-card,
+.projectcard.lyra-card {
   background: rgba(255, 255, 255, 0.14);
   color: var(--main-accent);
 }
 
 .projectcard.sudoku-card h3,
-.projectcard.sudoku-card p {
+.projectcard.sudoku-card p,
+.projectcard.lyra-card h3,
+.projectcard.lyra-card p {
   color: inherit;
 }
 
 .projectcard.sudoku-card:hover,
-.projectcard.sudoku-card:focus-visible {
+.projectcard.sudoku-card:focus-visible,
+.projectcard.lyra-card:hover,
+.projectcard.lyra-card:focus-visible {
   background: rgba(200, 200, 200, 0.5);
   color: #2c2c2c;
   border-color: rgba(220, 220, 220, 0.7);
@@ -274,7 +283,11 @@ h1, h2 {
 .projectcard.sudoku-card:hover h3,
 .projectcard.sudoku-card:hover p,
 .projectcard.sudoku-card:focus-visible h3,
-.projectcard.sudoku-card:focus-visible p {
+.projectcard.sudoku-card:focus-visible p,
+.projectcard.lyra-card:hover h3,
+.projectcard.lyra-card:hover p,
+.projectcard.lyra-card:focus-visible h3,
+.projectcard.lyra-card:focus-visible p {
   color: #2c2c2c;
 }
 
